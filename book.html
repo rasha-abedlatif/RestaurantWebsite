@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+  
+      <!-- Icon Font Stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  
+      <!-- Customized Bootstrap Stylesheet -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+      <!-- Template Stylesheet -->
+      <link rel="stylesheet" href="book.css">
+      <link rel="stylesheet" href="general.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="index.html">Le Pavillon</a>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a href="index.html">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel" class="offcanvas-title">Le Pavillon</h5>
+          </a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="about.html" >ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="menu.html">MENU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="book.html" class="login-button">Reserve</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+      
+  <div class="w-100 py-5 hero-header">
+    <div class="container text-center fade-in">
+        <h1 class="display-4 text-white slide-in-text">Savor elegance—reserve <br> at Le Pavillon today.</h1>
+        <nav aria-label="breadcrumb" class="fade-in-delayed">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <a href="#book" style="color: white;">Book</a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+      
+      <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+      </div>
+
+
+      <section class="booking-section">
+        <div class="cont">
+          <h2 class="title" data-animate="fade-in-left">Reservation</h2>
+          <img src="img/book-pattern.png" alt="Decorative Image" class="decor-image">
+          <h1 class="main-heading" data-animate="fade-in-left">Book A Table</h1>
+          <p class="description" data-animate="fade-in-left">
+            Restaurant will be open for all days, Sunday night will be closed. All booking payment is secured with a credit card. No charges will apply for online booking; no refunds.
+          </p>
+          <p class="description" data-animate="fade-in-left">Booking request <span style="color: #e8b338 !important;">+88-123-123456</span> or fill out the order form</p>
+
+      
+          <form class="booking-form" data-animate="fade-in-up">
+            <div class="ROW">
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Email" required>
+              <input type="text" placeholder="Phone" required>
+            </div>
+            <div class="ROW">
+              <div class="input-wrapper">
+                <span class="icon person-icon">&#xf007;</span>
+                <select>
+                  <option>1 Person</option>
+                  <option>2 People</option>
+                  <option>3 People</option>
+                </select>
+              </div>
+              <div class="input-wrapper">
+                <span class="icon calendar-icon">&#xf073;</span>
+                <input type="text" id="date-picker" placeholder="DD-MM-YYYY" required>
+              </div>
+              <div class="input-wrapper">
+                <span class="icon clock-icon">&#xf017;</span>
+                <input type="text" id="time-picker" placeholder="07:00 PM" required>
+              </div>
+            </div>
+            <textarea placeholder="Special Request"></textarea>
+            <button type="submit" id="book">
+              <span>Book A Table</span>
+            </button>
+          </form>
+      
+          <div class="card-container">
+            <div class="card" data-animate="fade-in-up">
+              <div class="overlay"></div>
+              <img src="img/booking-1.jpg" alt="USA Restaurant">
+              <div class="card-content">
+                <p class="location">USA</p>
+                <h3>New York</h3>
+                <p>Restaurant St, Delicious City, NY</p>
+                <p>P: +1 408 123 456 | E: booking@domainname.com</p>
+                <a href="contact.html?location=newyork" class="get-direction-link">
+                  <button class="get-direction">Get Direction</button>
+                </a>                
+                <div class="horizontal-lines"></div>
+              </div>
+            </div>
+            <div class="card" data-animate="fade-in-up">
+              <div class="overlay"></div>
+              <img src="img/book2.jpg" alt="France Restaurant">
+              <div class="card-content">
+                <p class="location">France</p>
+                <h3>Paris</h3>
+                <p>520, Delicious City, Avenue Paris</p>
+                <p>P: +33 408 123 456 | E: booking@domainname.com</p>
+                <a href="contact.html?location=paris" class="get-direction-link">
+                  <button class="get-direction">Get Direction</button>
+                </a>
+                <div class="horizontal-lines"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+          
+<!-- FOOTER SECTION -->
+<div class="container-fluid text-light footer pt-5 mt-5 wow fadeInUp " style="background-color: rgb(16, 15, 15);">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #b8b0a0;">Company</h4>
+          <a href="about.html" class="btn btn-link">About Us</a>
+          <a href="contact.html" class="btn btn-link">Contact Us</a>
+          <a href="book.html" class="btn btn-link">Reservation</a>
+          <a href="" class="btn btn-link">Privacy Policy</a>
+          <a href="" class="btn btn-link">Terms & Condition</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color:#b8b0a0;">Contact</h4>
+          <p class="mb-2"><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+          <p class="mb-2"><i class="fa fa-phone-alt"></i>+012 345 654410</p>
+          <p class="mb-2"><i class="fa fa-envelope me-3"></i>Information</p>
+          <div class="d-flex pt-2">
+            <a href="" class="btn btn-social mx-1"><i class="fab fa-facebook"></i></a>
+            <a href="" class="btn btn-social mx-1"><i class="fab fa-twitter"></i></a>
+            <a href="" class="btn btn-social mx-1"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #b8b0a0;">Opening</h4>
+          <h5 class="text-light fw-normal">Monday - Saturday</h5>
+          <p>09AM - 09PM</p>
+          <h5 class="text-light fw-normal">Sunday</h5>
+          <p>10AM - 08PM</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #b8b0a0;">Newsletter</h4>
+          <p>Get the latest updates and offers from us.</p>
+          <div class="position-relative mx-auto">
+            <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+            <button class="btn py-2 position-absolute top-0 end-0 me-2" style="background-color: #8e7c5d; color: #f4f4f4;">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center mb-3 mb-md-0 col-lg-12">
+            &copy;<a href="" class="border-bottom">Your Site Name, All Rights Reserved</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <script src="book.js"></script>
+      <script src="main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

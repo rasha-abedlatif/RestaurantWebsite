@@ -1,0 +1,428 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('img/contact.jpeg') no-repeat center center / cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Heading and Breadcrumb Styling */
+.hero-header h1,
+.hero-header nav {
+    position: relative;
+    z-index: 2;
+    color: #ffc107;
+}
+
+.hero-header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.hero-header nav {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out 0.3s forwards;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #fff;
+}
+
+.breadcrumb-item.active {
+    color: #fff;
+}
+
+/* Keyframes for Subtle Fade-In-Up Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+section {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 2em;
+    padding: 50px 0;
+    background-color: #F5F5EF;
+    border-radius: 10px;
+}
+
+/* Initial state before animation */
+.animated-section {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.5s ease-out;
+}
+
+.animated-section.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Individual element animations */
+.animated-section .content,
+.animated-section .contactForm,
+.animated-section .contactMethod .method {
+    opacity: 0;
+    transform: translateY(100px) rotate(10deg);
+    animation: none; /* Default state */
+}
+
+/* Keyframes for smooth and complex animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.9);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(30px) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Trigger animations on scroll */
+.animated-section.active .content {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.animated-section.active .contactForm {
+    animation: slideInLeft 1s ease-out forwards 0.3s;
+}
+
+.animated-section.active .contactMethod .method {
+    animation: slideInRight 1s ease-out forwards 0.6s;
+}
+
+
+.content {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2em;
+}
+
+.section-header {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #7e6956;
+    margin-bottom: 0.5em;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #180d07;
+}
+
+.subHeading {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+    color: #b8aea4;
+}
+
+.contactForm {
+    position: relative;
+    display: grid;
+    gap: 2em;
+    margin-top: 2em;
+    position: relative;
+    margin: 0 auto;
+    padding: 2em 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+    width: 95%;
+    max-width: 700px;
+    border: none;
+    font-size: 1rem;
+    padding: 1em;
+    outline: none;
+    margin-bottom: 1em;
+    background-color: #f9f6ef;
+    color: #7e6956;
+    border-radius: 10px;
+    border: 1px solid #b8aea4;
+}
+
+.input:focus {
+    border: 1px solid #180d07;
+}
+
+.input::placeholder {
+    text-transform: capitalize;
+    color: #b8aea4;
+}
+
+.submit {
+    background-color: #e2ba3f;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    padding: 1em;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #f1dc9a;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.mapBg {
+    position: absolute;
+    background-color: #e1d79a;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.map {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.contactMethod {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.method {
+    display: flex;
+    align-items: center;
+    margin: 0 1em;
+}
+
+.contactIcon {
+    font-size: 2rem;
+    color: #e2ba3f;
+    margin-right: 1em;
+}
+
+.text h1 {
+    font-size: 1.2rem;
+    color: #180d07;
+}
+
+.text p {
+    font-size: 1rem;
+    color: #7e6956;
+}
+
+@media screen and (min-width: 800px) {
+    section {
+        padding: 100px 0;
+    }
+
+    .contactForm {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .contactMethod {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 799px) {
+    .contactMethod {
+        flex-direction: column;
+    }
+}
+.map-toggle-buttons {
+    position: absolute;
+    top: -40px;
+    left: 75%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    z-index: 10;
+  }
+  
+  .map-toggle-btn {
+    background-color: #eac14a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+  }
+  
+  .map-toggle-btn:before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6d85f;
+    z-index: 0;
+    transition: all 0.3s ease;
+  }
+  .map-toggle-btn:hover:before {
+    top: 0;
+  }
+  .map-toggle-btn span {
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 830px) {
+    .contactForm {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      gap: 70px; 
+      padding: 20px; 
+      max-width: 450px;
+    }
+  
+    .map-toggle-buttons {
+      order: 2; 
+      margin: 45em 10px;
+      width: 100%; 
+      text-align: center;
+    }
+  
+    .map-container {
+      order: 3; 
+    }
+  }
+  @media(max-width: 767px) {
+    .contactForm {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        gap: 70px; 
+        padding: 20px; 
+        max-width: 450px;
+      }
+  }
+  @media(max-width:600px){
+    .contactForm {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        gap: 70px; 
+        padding: 20px; 
+        max-width: 300px;
+      }
+  }

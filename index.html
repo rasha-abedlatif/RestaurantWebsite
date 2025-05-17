@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Template Stylesheet -->
+<link rel="stylesheet"  href="style.css">
+<link rel="stylesheet" href="general.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- Timepicker Addon -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand me-auto" href="index.html">Le Pavillon</a>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <a href="index.html">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel" class="offcanvas-title">Le Pavillon</h5>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active mx-lg-2" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="about.html" >ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="menu.html">MENU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="contact.html">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="book.html" class="login-button">Reserve</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    
+     <!-- Hero Section -->
+<div class="w-100 py-5 bg-dark text-white hero-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Side: Text -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1
+          class="display-3 text-white animated slideInLeft"
+          style="font-family: 'Playfair Display', serif;"
+        >
+          Enjoy Our <br />
+          Delicious Meals
+        </h1>
+        <p
+          class="text-white animated slideInLeft mb-4 pb-2"
+          style="font-family: 'Lora', serif;"
+        >
+          Discover the best flavors and dining experiences at our
+          restaurant.
+        </p>
+        <a
+          href="menu.html"
+          class="btn btn-primary py-sm-3 px-sm-5 slideInLeft"
+          style="  font-family: 'Playfair Display', serif !important;"
+        >
+          Check Menu
+        </a>
+      </div>
+      <!-- Right Side: Image -->
+      <div class="col-lg-6 text-center">
+        <img
+          src="img/theme.png"
+          alt="Dish"
+          class="img-fluid hero-img animate__animated animate__zoomIn"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Navbar & hero section -->
+
+    <div id="progress">
+      <span id="progress-value">&#x1F815;</span>
+    </div>
+
+
+<!-- food we offer -->
+<div class="offer">
+  <div class="HEADER">
+      <p style="  letter-spacing: 14px;">FLAVORS FOR ROYALTY</p>
+      <img src="img/book-pattern.png" alt="" width="190px" style="display: block; margin: 0 auto;">
+      <h1>We Offer Top Notch</h1>
+      <p>Indulge in a culinary journey where every bite is crafted to perfection, blending flavors that delight and inspire.</p>
+  </div>
+
+  <div class="Cards">
+      <div class="CARD">
+          <div class="patt">
+              <img src="img/offer-image-1.jpg" alt="" class="above">
+              <img src="img/index-pattern.png" alt="" class="behind">
+          </div>
+          <div class="CARD-content">
+              <h3>Breakfast</h3>
+              <a href="menu.html#breakfast">View Menu</a>
+          </div>
+      </div>
+
+      <div class="CARD">
+          <div class="patt">
+              <img src="img/offer-image-2.jpg" alt="" class="above">
+              <img src="img/index-pattern.png" alt="" class="behind">
+          </div>
+          <div class="CARD-content">
+              <h3>Main Course</h3>
+              <a href="menu.html#salads">View Menu</a>
+          </div>
+      </div>
+
+      <div class="CARD">
+          <div class="patt">
+              <img src="img/offer-image-3.jpg" alt="" class="above">
+              <img src="img/index-pattern.png" alt="" class="behind">
+          </div>
+          <div class="CARD-content">
+              <h3>Drinks</h3>
+              <a href="menu.html#fancy-drinks">View Menu</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- About Us Section -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="row g-4 image-stack">
+          <div class="col-6 text-start image-item">
+            <img
+              src="img/angle4.jpeg"
+              alt="Luxury Restaurant Interior"
+              class="img-fluid rounded w-100 scroll-animate fade-right"
+              style="height: 300px; object-fit: cover;"
+            />
+          </div>
+          <div class="col-6 text-start image-item">
+            <img
+              src="img/angle2.jpeg"
+              alt="Elegant Dining Space"
+              class="img-fluid rounded w-100 scroll-animate fade-left"
+              style="height: 260px; object-fit: cover; margin-top: 15%;"
+            />
+          </div>
+          <div class="col-6 text-end image-item">
+            <img
+              src="img/angle3.jpeg"
+              alt="Gourmet Table Setting"
+              class="img-fluid rounded w-100 scroll-animate fade-right"
+              style="height: 260px; object-fit: cover;"
+            />
+          </div>
+          <div class="col-6 text-end image-item">
+            <img
+              src="img/angle5.jpeg"
+              alt="Fine Dining Ambiance"
+              class="img-fluid rounded w-100 scroll-animate fade-left"
+              style="height: 300px; object-fit: cover;"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h5 class="section-title ff-secondary text-start fw-normal" style="color: #a78f6b !important;">
+          Indulge in Elegance
+        </h5>
+        <h1 class="mb-4">
+          Welcome to <i class="fa fa-utensils me-2" style="color: #a78f6b !important;"></i>Le Pavillon
+        </h1>
+        <p class="mb-4">
+          Discover a world of culinary sophistication at <strong>Le Pavillon</strong>. 
+          We specialize in serving artisanal dishes crafted by world-class chefs 
+          who infuse passion and creativity into every bite. 
+        </p>
+        <p class="mb-4">
+          Whether you're celebrating a milestone, hosting an elegant soirée, or 
+          simply treating yourself to the finer things, our gourmet creations 
+          and luxurious ambiance promise an unforgettable dining experience. 
+        </p>
+        <div class="row g-4 mb-4">
+          <div class="col-sm-6">
+            <div
+              class="d-flex align-items-center border-start border-5 border-warning px-3"
+            >
+              <h1
+                id="years-counter"
+                class="flex-shrink-0 display-5 text-warning mb-0"
+              >
+                15
+              </h1>
+              <div class="ps-4">
+                <p class="mb-0">Years of</p>
+                <h6 class="text-uppercase mb-0">EXCELLENCE</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div
+              class="d-flex align-items-center border-start border-5 border-warning px-3"
+            >
+              <h1
+                id="chefs-counter"
+                class="flex-shrink-0 display-5 text-warning mb-0"
+              >
+                50
+              </h1>
+              <div class="ps-4">
+                <p class="mb-0">Masterful</p>
+                <h6 class="text-uppercase mb-0">CHEFS</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn-danger py-3 px-5 mt-2">Explore More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- menu section -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center">
+      <h5 class=" fw-normal" style="color: #a78f6b !important;">Special Selection</h5>
+      <h1 class="mb-5">Delicious Menu</h1>
+    </div>
+    <div class="text-center">
+      <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+        <li class="nav-item">
+          <a href="#" class="filter-btn active d-flex align-items-center text-start mx-3 pb-3 border-bottom border-warning text-decoration-none" data-filter="all">
+            <i class="fa fa-hamburger fa-2x text-warning"></i>
+            <div class="ps-3">
+              <small class="text-secondary">Special</small>
+              <h6 class="mt-n1 mb-0 text-dark">Meals</h6>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="filter-btn d-flex align-items-center text-start mx-3 pb-3 border-bottom border-warning text-decoration-none" data-filter="dinner">
+            <i class="fa fa-utensils fa-2x text-warning"></i>
+            <div class="ps-3">
+              <small class="text-secondary">Famous</small>
+              <h6 class="mt-n1 mb-0 text-dark">Dinner</h6>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="filter-btn d-flex align-items-center text-start mx-3 pb-3 border-bottom border-warning text-decoration-none" data-filter="breakfast">
+            <i class="fa fa-coffee fa-2x text-warning"></i>
+            <div class="ps-3">
+              <small class="text-secondary">Lovely</small>
+              <h6 class="mt-n1 mb-0 text-dark">Breakfast</h6>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="row gy-5 gx-5 menu-items">
+        <!-- Dinner Meals -->
+        <div class="col-lg-6 menu-item" data-category="dinner">
+          <div class="d-flex align-items-center">
+            <img src="img/d1.jpeg" alt="Dinner Item" class="flex-shrink-0 img-fluid rounded position-relative" style="height: 150px; width: 150px; z-index: 1;">
+            <div class="w-75 h-75 d-flex flex-column text-start ps-4 position-absolute" style="background-color: #f6f5ec; z-index: 2; left: 160px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <h5 class="d-flex justify-content-between mt-3 border-bottom pb-2">
+                <span>CrunchStack Supreme</span>
+                <span class="text-warning">$150</span>
+              </h5>
+              <small class="fst-italic text-secondary">Crispy fried chicken breast, fresh lettuce, creamy slaw, and zesty toppings</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 menu-item" data-category="dinner">
+          <div class="d-flex align-items-center">
+            <img src="img/d4.jpeg" alt="Dinner Item" class="flex-shrink-0 img-fluid rounded position-relative" style="height: 150px; width: 150px; z-index: 1;">
+            <div class="w-75 h-75 d-flex flex-column text-start ps-4 position-absolute" style="background-color: #f6f5ec; z-index: 2; left: 160px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <h5 class="d-flex justify-content-between mt-3 border-bottom pb-2">
+                <span>Steak Alfredo</span>
+                <span class="text-warning">$130</span>
+              </h5>
+              <small class="fst-italic text-secondary">Creamy Alfredo sauce with tender steak slices.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 menu-item" data-category="dinner">
+          <div class="d-flex align-items-center">
+            <img src="img/d10.jpeg" alt="Dinner Item" class="flex-shrink-0 img-fluid rounded position-relative" style="height: 150px; width: 150px; z-index: 1;">
+            <div class="w-75 h-75 d-flex flex-column text-start ps-4 position-absolute" style="background-color: #f6f5ec; z-index: 2; left: 160px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <h5 class="d-flex justify-content-between mt-3 border-bottom pb-2">
+                <span>BBQ Ribs</span>
+                <span class="text-warning">$140</span>
+              </h5>
+              <small class="fst-italic text-secondary">Smoky BBQ ribs served with fries.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 menu-item" data-category="dinner">
+          <div class="d-flex align-items-center">
+            <img src="img/d2.jpeg" alt="Dinner Item" class="flex-shrink-0 img-fluid rounded position-relative"  style="height: 150px; width: 150px; z-index: 1;">
+            <div class="w-75 h-75 d-flex flex-column text-start ps-4 position-absolute" style="background-color: #f6f5ec; z-index: 2; left: 160px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <h5 class="d-flex justify-content-between mt-3 border-bottom pb-2">
+                <span>Chicken Parmesan</span>
+                <span class="text-warning">$120</span>
+              </h5>
+              <small class="fst-italic text-secondary">Breaded chicken with marinara sauce.</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Breakfast Meals -->
+        <div class="col-lg-6 menu-item" data-category="breakfast">
+          <div class="d-flex align-items-center">
+            <img src="img/bk1.jpeg" alt="Breakfast Item" class="flex-shrink-0 img-fluid rounded position-relative" style="height: 150px; width: 150px; z-index: 1;">
+            <div class="w-75 h-75 d-flex flex-column text-start ps-4 position-absolute" style="background-color: #f6f5ec; z-index: 2; left: 160px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <h5 class="d-flex justify-content-between mt-3 border-bottom pb-2">
+                <span>Pancakes</span>
+                <span class="text-warning">$50</span>
+              </h5>
+              <small class="fst-italic text-secondary">Fluffy pancakes with syrup for breakfast.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 menu-item" data-category="breakfast">
+          <div class="d-flex align-items-center">
+            <img src="img/bk4.jpeg" alt="Breakfast Item" class="flex-shrink-0 img-fluid rounded position-relative" style="height: 150px; width: 150px; z-index: 1;">
+            <div class="w-75 h-75 d-flex flex-column text-start ps-4 position-absolute" style="background-color: #f6f5ec; z-index: 2; left: 160px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <h5 class="d-flex justify-content-between mt-3 border-bottom pb-2">
+                <span>Omelette</span>
+                <span class="text-warning">$60</span>
+              </h5>
+              <small class="fst-italic text-secondary">Fluffy omelette with your choice of fillings.</small>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 menu-item" data-category="breakfast">
+          <div class="d-flex align-items-center">
+            <img src="img/bk2.jpeg" alt="Breakfast Item" class="flex-shrink-0 img-fluid rounded position-relative" style="height: 150px; width: 150px; z-index: 1;">
+            <div class="w-75 h-75 d-flex flex-column text-start ps-4 position-absolute" style="background-color: #f6f5ec; z-index: 2; left: 160px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <h5 class="d-flex justify-content-between mt-3 border-bottom pb-2">
+                <span>Avocado Toast</span>
+                <span class="text-warning">$70</span>
+              </h5>
+              <small class="fst-italic text-secondary">Healthy avocado toast with toppings.</small>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 menu-item" data-category="breakfast">
+          <div class="d-flex align-items-center">
+            <img src="img/bk3.jpeg" alt="Breakfast Item" class="flex-shrink-0 img-fluid rounded position-relative" style="height: 150px; width: 150px; z-index: 1;">
+            <div class="w-75 h-75 d-flex flex-column text-start ps-4 position-absolute" style="background-color: #f6f5ec; z-index: 2; left: 160px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <h5 class="d-flex justify-content-between mt-3 border-bottom pb-2">
+                <span>Breakfast Burrito</span>
+                <span class="text-warning">$80</span>
+              </h5>
+              <small class="fst-italic text-secondary">A delicious breakfast burrito stuffed with goodness.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" id="image-overlay">
+    <img src="" alt="Enlarged Image">
+  </div>
+</div>
+
+
+<section class="reservation-hot-deal animated-section">
+  <!-- Left Side: Reservation Form -->
+  <div class="reservation-form" data-animate="fade-in-left">
+    <h2 class="title" style="font-family:Playfair Display, serif;">Online Reservation</h2>
+    <p class="description" style=" font-family: Roboto, sans-serif;">Booking request <span style="color: #e8b338;">+88-123-123456</span> or fill out the order form</p>
+    <form class="booking-form">
+      <div class="ROW">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Phone" required>
+      </div>
+      <div class="ROW">
+        <div class="input-wrapper">
+          <span class="icon person-icon">&#xf007;</span>
+          <select>
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3 People</option>
+          </select>
+        </div>
+        <div class="input-wrapper">
+          <span class="icon calendar-icon">&#xf073;</span>
+          <input type="text" id="date-picker" placeholder="DD-MM-YYYY" required>
+        </div>
+        <div class="input-wrapper">
+          <span class="icon clock-icon">&#xf017;</span>
+          <input type="text" id="time-picker" placeholder="07:00 PM" required>
+        </div>
+      </div>
+      <textarea placeholder="Special Request"></textarea>
+      <button type="submit" id="book">
+        <span>Book A Table</span>
+      </button>
+    </form>
+  </div>
+
+  <!-- Right Side: Hot Deal -->
+  <div class="hot-deal-section" data-animate="fade-in-right">
+    <h3 class="deal-title" style="margin-top: 40px;">HOT DEAL</h3>
+    <h4 class="deal-subtitle" style="margin-top: 30px;">Lunch & Dinner Specials</h4>
+    <div class="discount-container" style="margin-top: 40px;">
+      <div class="rotating-box"></div>
+      <div class="discount-box">
+        <p class="small-text">UP TO</p>
+        <p class="large-text">45%</p>
+        <p class="small-text">DISCOUNT</p>
+      </div>
+    </div>
+    <ul class="deal-details">
+      <li>Not valid for online order</li>
+      <li>Non-refundable</li>
+      <li>Offer end on 25 Jan</li>
+    </ul>
+    <button class="deal-book-button" style="margin-top: 40px;">
+      <span>BOOK NOW</span>
+    </button>
+  </div>
+</section>
+
+
+    <!-- Services Section -->
+    <div class="w-100 py-5" style="background-color: #171819; padding: 100px !important;" >
+      <div class="HEADER animated-header">
+        <p style="letter-spacing: 12px; color: #83683c;">Why Choose Us</p>
+        <img src="img/book-pattern.png" alt="" width="190px">
+        <h1 class="service-h" style="color: #83683c;">Our Services</h1>
+      </div>
+      <div class="container" id="services">
+        <div class="row text-center" id="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="service-item" style="background-color: #151616;">
+              <div class="icon">
+                <i class="fa fa-user-tie"></i>
+              </div>
+              <h5>Expert Chefs</h5>
+              <p>
+                Our chefs bring years of experience to craft the finest dishes.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="service-item" style="background-color: #121111;">
+              <div class="icon">
+                <i class="fa fa-utensils"></i>
+              </div>
+              <h5>Delicious Cuisine</h5>
+              <p>
+                Enjoy freshly prepared meals using high-quality ingredients.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="service-item" style="background-color: #151616;">
+              <div class="icon">
+                <i class="fas fa-glass-cheers"></i>
+              </div>
+              <h5>Event & Party</h5>
+              <p>
+                Make your celebrations memorable with our custom catering services, tailored to your events.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="service-item" style="background-color: #121111;">
+              <div class="icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h5>Fresh Environment</h5>
+              <p>
+                Experience a welcoming ambiance where fresh flavors meet a clean and cozy atmosphere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Services Section -->
+
+
+
+<!-- Team Section -->
+<div class="container-xxl pt-5 pb-3">
+  <div class="container">
+    <div class="text-center wow fadeInUp">
+      <h5 class="section-title ff-secondary text-center fw-normal text-animate" style="color:#a78f6b !important ;">Team Members</h5>
+      <h1 class="mb-5 text-animate text-dark" >Our Master Chefs</h1>
+    </div>
+    <div class="row">
+      <!-- Chef 1 -->
+      <div class="col-lg-3 col-md-6 wow fadeInUp">
+        <div class="team-item text-center rounded overflow-hidden" style="background-color: #fcf8f3;">
+          <div class="team-img rounded-circle overflow-hidden m-4 border border-warning" style="border-width: 5px;">
+            <img class="img-fluid" src="img/chef1.jpeg" alt="Chef">
+          </div>
+          <h5 class="mb-0 text-dark">Chef Marco Rossi</h5>
+          <small class="text-muted">Italian Cuisine Specialist</small>
+          <p class="mt-2 text-dark">Master of authentic pasta and wood-fired pizzas. </p>
+          <div class="social-icons d-flex justify-content-center mt-3">
+            <a href="#" class="btn btn-square" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="btn btn-square mx-1" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn btn-square" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Chef 2 -->
+      <div class="col-lg-3 col-md-6 wow fadeInUp">
+        <div class="team-item text-center rounded overflow-hidden" style="background-color: #fcf8f3;">
+          <div class="team-img rounded-circle overflow-hidden m-4 border border-warning" style="border-width: 5px;">
+            <img class="img-fluid" src="img/chef2.jpeg" alt="Chef">
+          </div>
+          <h5 class="mb-0 text-dark">Chef Sophie Laurent</h5>
+          <small class="text-muted">French Pastry Chef</small>
+          <p class="mt-2 text-dark">Creator of delicate macarons and éclairs. </p>
+          <div class="social-icons d-flex justify-content-center mt-3">
+            <a href="#" class="btn btn-square" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="btn btn-square mx-1" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn btn-square" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Chef 3 -->
+      <div class="col-lg-3 col-md-6 wow fadeInUp">
+        <div class="team-item text-center rounded overflow-hidden" style="background-color: #fcf8f3;">
+          <div class="team-img rounded-circle overflow-hidden m-4 border border-warning" style="border-width: 5px;">
+            <img class="img-fluid" src="img/chef3.jpeg" alt="Chef">
+          </div>
+          <h5 class="mb-0 text-dark">Chef Aisha Khan</h5>
+          <small class="text-muted">Fusion Cuisine Innovator</small>
+          <p class="mt-2 text-dark">Expert in blending global flavors with flair.</p>
+          <div class="social-icons d-flex justify-content-center mt-3">
+            <a href="#" class="btn btn-square" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="btn btn-square mx-1" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn btn-square" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Chef 4 -->
+      <div class="col-lg-3 col-md-6 wow fadeInUp">
+        <div class="team-item text-center rounded overflow-hidden" style="background-color:  #fcf8f3;">
+          <div class="team-img rounded-circle overflow-hidden m-4 border border-warning" style="border-width: 5px;">
+            <img class="img-fluid" src="img/chef4.jpeg" alt="Chef">
+          </div>
+          <h5 class="mb-0 text-dark">Chef Liam Carter</h5>
+          <small class="text-muted">Grill Master</small>
+          <p class="mt-2 text-dark">Known for perfect steaks and smoky BBQ.</p>
+          <div class="social-icons d-flex justify-content-center mt-3">
+            <a href="#" class="btn btn-square" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="btn btn-square mx-1" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn btn-square" style="background-color: #c49a6c; color: #fff;"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!-- FOOTER SECTION -->
+<div class="container-fluid text-light footer pt-5 mt-5 wow fadeInUp " style="background-color: rgb(16, 15, 15);">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #b8b0a0;">Company</h4>
+        <a href="about.html" class="btn btn-link">About Us</a>
+        <a href="contact.html" class="btn btn-link">Contact Us</a>
+        <a href="book.html" class="btn btn-link">Reservation</a>
+        <a href="" class="btn btn-link">Privacy Policy</a>
+        <a href="" class="btn btn-link">Terms & Condition</a>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color:#b8b0a0;">Contact</h4>
+        <p class="mb-2"><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+        <p class="mb-2"><i class="fa fa-phone-alt"></i>+012 345 654410</p>
+        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Information</p>
+        <div class="d-flex pt-2">
+          <a href="" class="btn btn-social mx-1"><i class="fab fa-facebook"></i></a>
+          <a href="" class="btn btn-social mx-1"><i class="fab fa-twitter"></i></a>
+          <a href="" class="btn btn-social mx-1"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #b8b0a0;">Opening</h4>
+        <h5 class="text-light fw-normal">Monday - Saturday</h5>
+        <p>09AM - 09PM</p>
+        <h5 class="text-light fw-normal">Sunday</h5>
+        <p>10AM - 08PM</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #b8b0a0;">Newsletter</h4>
+        <p>Get the latest updates and offers from us.</p>
+        <div class="position-relative mx-auto">
+          <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+          <button class="btn py-2 position-absolute top-0 end-0 me-2" style="background-color: #8e7c5d; color: #f4f4f4;">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="copyright">
+      <div class="row">
+        <div class="col-md-6 text-center mb-3 mb-md-0 col-lg-12">
+          &copy;<a href="" class="border-bottom">Your Site Name, All Rights Reserved</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+
+
+
+
+    <!-- JS Libraries -->
+     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus/dist/js/tempus-dominus.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>

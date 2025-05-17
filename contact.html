@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+     <link
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+     rel="stylesheet"
+   />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+ 
+     <!-- Customized Bootstrap Stylesheet -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Template Stylesheet -->
+     <link rel="stylesheet"  href="contact.css">
+     <link rel="stylesheet" href="general.css">
+
+     <!-- jQuery and jQuery UI CDN -->
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="index.html">Le Pavillon</a>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a href="index.html">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel" class="offcanvas-title">Le Pavillon</h5>
+          </a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="about.html" >ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="menu.html">MENU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2 active" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="book.html" class="login-button">Reserve</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+<!-- Hero Section -->
+<div class="w-100 py-5 hero-header">
+    <div class="container text-center">
+        <h1 class="display-4 text-white">Get in Touch <br> with Us</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">  <a href="#contact" style="color: white;">Contact</a>
+                    
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div id="progress">
+  <span id="progress-value">&#x1F815;</span>
+</div>
+
+<section class="animated-section" id="contact">
+  <div class="content">
+      <h4 class="section-header">Contact Le Pavillon</h4>
+      <h1 class="heading">Reach Out to Us!</h1>
+      <p class="subHeading">We're here to help and answer any questions you might have.</p>
+  </div>
+  <div class="contactForm">
+      <form action="">
+          <h1 class="sub-heading">Need Assistance?</h1>
+          <p class="para2">Feel free to leave us a message. We will get back to you shortly.</p>
+          <input type="text" class="input" placeholder="Full Name">
+          <input type="text" class="input" placeholder="Your Email">
+          <input type="text" class="input" placeholder="Subject">
+          <textarea class="input" cols="30" rows="5" placeholder="Your Message"></textarea>
+          <input type="submit" class="input submit" value="Send Message">
+      </form>
+
+      <!-- Map Toggle Buttons -->
+      <div class="map-toggle-buttons">
+          <button onclick="changeMap('newyork')" id="newyork-button" class="map-toggle-btn"> <span>New York</span></button>
+          <button onclick="changeMap('paris')"  id="paris-button" class="map-toggle-btn"><span>Paris</span></button>
+      </div>
+
+      <div class="map-container">
+          <div class="mapBg"></div>
+          <div id="newyork-map" class="map" style="display: block;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511.1950334671021!2d-73.97883382153053!3d40.75344473342501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259eb7709c08d%3A0x9dae949d90a44127!2sLe%20Pavillon!5e0!3m2!1sen!2slb!4v1736352616069!5m2!1sen!2slb"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          
+          <div id="paris-map" class="map" style="display: none;">
+                      <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84013.72301284713!2d2.147247791290274!3d48.85003228281122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67022659c0001%3A0xe92e8e98f28546eb!2sLE%20PAVILLON%20Paris%2015!5e0!3m2!1sen!2slb!4v1736705422005!5m2!1sen!2slb"
+            style="border:0; width: 100%; height: 100%;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          </div>
+          </div>
+      </div>
+  <div class="contactMethod">
+      <div class="method">
+          <i class="fa-solid fa-location-dot contactIcon"></i>
+          <article class="text">
+              <h1 class="sub-heading">Our Location</h1>
+              <p>123 Main Street, City, Country.</p>
+          </article>
+      </div>
+      <div class="method">
+          <i class="fa-solid fa-envelope contactIcon"></i>
+          <article class="text">
+              <h1 class="sub-heading">Email Us</h1>
+              <p>contact@lepavillon.com</p>
+          </article>
+      </div>
+      <div class="method">
+          <i class="fa-solid fa-phone contactIcon"></i>
+          <article class="text">
+              <h1 class="sub-heading">Call Us</h1>
+              <p>+123 456 7890</p>
+          </article>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- FOOTER SECTION -->
+<div class="container-fluid text-light footer pt-5 mt-5 wow fadeInUp " style="background-color: rgb(16, 15, 15);">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #b8b0a0;">Company</h4>
+          <a href="about.html" class="btn btn-link">About Us</a>
+          <a href="contact.html" class="btn btn-link">Contact Us</a>
+          <a href="book.html" class="btn btn-link">Reservation</a>
+          <a href="" class="btn btn-link">Privacy Policy</a>
+          <a href="" class="btn btn-link">Terms & Condition</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color:#b8b0a0;">Contact</h4>
+          <p class="mb-2"><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+          <p class="mb-2"><i class="fa fa-phone-alt"></i>+012 345 654410</p>
+          <p class="mb-2"><i class="fa fa-envelope me-3"></i>Information</p>
+          <div class="d-flex pt-2">
+            <a href="" class="btn btn-social mx-1"><i class="fab fa-facebook"></i></a>
+            <a href="" class="btn btn-social mx-1"><i class="fab fa-twitter"></i></a>
+            <a href="" class="btn btn-social mx-1"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #b8b0a0;">Opening</h4>
+          <h5 class="text-light fw-normal">Monday - Saturday</h5>
+          <p>09AM - 09PM</p>
+          <h5 class="text-light fw-normal">Sunday</h5>
+          <p>10AM - 08PM</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #b8b0a0;">Newsletter</h4>
+          <p>Get the latest updates and offers from us.</p>
+          <div class="position-relative mx-auto">
+            <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+            <button class="btn py-2 position-absolute top-0 end-0 me-2"  style="background-color: #8e7c5d; color: #f4f4f4;">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center mb-3 mb-md-0 col-lg-12">
+            &copy;<a href="" class="border-bottom">Your Site Name, All Rights Reserved</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+<script src="contact.js"></script>
+<!-- <script src="main.js"></script> -->
+<!-- <script src="js/bootstrap.bundle.min.js"></script>  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
